@@ -1,17 +1,14 @@
-package ro.itschool.studentsmanagement.services;
+package ro.itschool.studentsmanagement.services.student;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import ro.itschool.studentsmanagement.exceptions.StudentNotFoundException;
 import ro.itschool.studentsmanagement.persistence.entity.Student;
 import ro.itschool.studentsmanagement.persistence.repositories.StudentRepository;
 
 import java.util.List;
 
-@Service
 @RequiredArgsConstructor
-public class StudentService {
-
+public abstract class AbstractStudentService {
     private final StudentRepository studentRepository;
 
     public List<Student> getAllStudents() {
